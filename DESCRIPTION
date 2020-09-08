@@ -16,3 +16,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 URL: https://github.com/felipelbhering/cursor4ds2analiseames
 BugReports: https://github.com/felipelbhering/cursor4ds2analiseames/issues
+Depends: 
+    R (>= 2.10)
+Imports: 
+    magrittr,
+    dplyr
