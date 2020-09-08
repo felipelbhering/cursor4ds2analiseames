@@ -13,13 +13,13 @@ pegar_num_nas <- function(df, nome_coluna, prop = FALSE) {
 # código que retorna o número de NAs da coluna "nome_coluna"
   prop_false = df %>%
     dplyr::summarize(
-      across(nome_coluna,
+      dplyr::across(nome_coluna,
              ~ sum(is.na(.x), na.rm = TRUE))) %>%
     dplyr::pull()
 
   prop_true = df %>%
     dplyr::summarize(
-      across(nome_coluna,
+      dplyr::across(nome_coluna,
              ~ sum(is.na(.x), na.rm = TRUE)/dplyr::n())) %>%
     dplyr::pull()
 
