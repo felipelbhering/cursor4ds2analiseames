@@ -12,7 +12,7 @@ sumarizar_venda_media <- function(df, nome_coluna) {
 
 # código que calcula a venda média
   df %>%
-    dplyr::group_by(across(nome_coluna))%>%
+    dplyr::group_by(dplyr::across(nome_coluna))%>%
     dplyr::summarise(
       valor_venda_media = mean(venda_valor, na.rm=TRUE)
     )

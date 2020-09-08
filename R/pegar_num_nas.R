@@ -18,7 +18,7 @@ pegar_num_nas <- function(df, nome_coluna, prop = FALSE) {
 
   prop_true = df %>%
     dplyr::select(nome_coluna) %>%
-    dplyr::summarize_all(~sum(is.na(.x), na.rm = TRUE)/n()) %>%
+    dplyr::summarize_all(~sum(is.na(.x), na.rm = TRUE)/dplyr::n()) %>%
     dplyr::pull()
 
   ifelse(prop == TRUE, prop_true, prop_false)
